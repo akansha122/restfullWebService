@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration
+	xmlns="http://www.hibernate.org/xsd/orm/cfg"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.hibernate.org/xsd/orm/cfg hibernate-configuration-4.0.xsd ">
+	<session-factory>
+		<property name="hibernate.connection.driver_class">
+       com.mysql.jdbc.Driver
+     </property>
+		<property name="hibernate.connection.url">
+       jdbc:mysql://localhost:3306/hibernate
+     </property>
+		<property name="hibernate.connection.username">
+       root
+     </property>
+		<property name="hibernate.connection.password">
+       root
+     </property>
+		<property name="hibernate.connection.pool">
+       50
+     </property>
+		<property name="hibernate.connection.dialect">
+       org.hibernate.dialect.MySQL57Dialect.class                                  
+     </property>
+		<property name="hibernate.show_sql">
+       true
+     </property>
+		<property name="hibernate.hbm2ddl.auto">
+        update
+     </property>
+
+		<mapping class="com.zensar.entities.Product"></mapping>
+	</session-factory>
+</hibernate-configuration>
